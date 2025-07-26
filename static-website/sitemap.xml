@@ -1,0 +1,16 @@
+static-website
+├── src
+│   ├── css
+│   │   ├── main.css
+│   │   └── normalize.css
+│   ├── js
+│   │   └── main.js
+│   ├── pages
+│   │   ├── about.html
+│   │   ├── contact.html
+│   │   └── services.html
+│   └── index.html
+├── .gitignore
+├── robots.txt
+├── sitemap.xml
+└── README.md
