@@ -14,9 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 
@@ -52,6 +55,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Event listeners for the reverser tool
-    document.getElementById('username').addEventListener('input', reverseUsername);
-    document.getElementById('share-button').addEventListener('click', shareOnX);
+    const usernameInput = document.getElementById('username');
+    if (usernameInput) {
+        usernameInput.addEventListener('input', reverseUsername);
+    }
+
+    const shareButton = document.getElementById('share-button');
+    if (shareButton) {
+        shareButton.addEventListener('click', shareOnX);
+    }
 });
