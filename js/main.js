@@ -54,4 +54,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listeners for the reverser tool
     document.getElementById('username').addEventListener('input', reverseUsername);
     document.getElementById('share-button').addEventListener('click', shareOnX);
+
+    // Interactive hero title tilt effect
+    const heroTitle = document.querySelector('.hero-title');
+    if (heroTitle) {
+        document.addEventListener('mousemove', (e) => {
+            const x = (window.innerWidth / 2 - e.clientX) / 25;
+            const y = (window.innerHeight / 2 - e.clientY) / 25;
+            heroTitle.style.transform = `perspective(1000px) rotateX(${y}deg) rotateY(${x}deg)`;
+        });
+    }
 });
