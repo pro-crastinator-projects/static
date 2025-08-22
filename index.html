@@ -19,17 +19,20 @@
         </nav>
     </header>
     <main>
-        <h1>Username Reverser Tool</h1>
-        <div class="tool-container">
-            <div class="input-group">
-                <label for="username">Your X (Twitter) Username:</label>
-                <input type="text" id="username" placeholder="Enter username (without @)">
+        <section class="hero">
+            <h1>Username Reverser</h1>
+            <p>Enter your X handle and see it flipped in neon style.</p>
+            <div class="tool-container">
+                <div class="input-group">
+                    <label for="username">Your X (Twitter) Username:</label>
+                    <input type="text" id="username" placeholder="Enter username (without @)">
+                </div>
+                <div class="result-group">
+                    <p>Your username backwards is: <span id="reversed-username"></span></p>
+                </div>
+                <button id="share-button">Share on X</button>
             </div>
-            <div class="result-group">
-                <p>Your username backwards is: <span id="reversed-username"></span></p>
-            </div>
-            <button id="share-button">Share on X</button>
-        </div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2023 Static Procrastination Tools. All rights reserved.</p>
